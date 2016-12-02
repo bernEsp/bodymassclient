@@ -1,0 +1,38 @@
+<h1> Welcome to the healthy zone </h1>
+<h4> Caculate My body mass index </h4>
+<form name="bodyIndex" ng-submit="calculate()">
+  <md-input-container>
+    <label> Your weight? </label>
+    <input type="text"
+           name="weight"
+           ng-model="data.weight"
+           required>
+    <div ng-messages="bodyIndex.weight.$error">
+      <div ng-message="required"> Your weight is required </div>
+    </div>
+  </md-input-container>
+  <md-input-container>
+    <label> Your height? </label>
+    <input type="text"
+           name="height"
+           ng-model="data.height"
+           required>
+    <div ng-messages="bodyIndex.height.$error">
+      <div ng-message="required"> Your height is required </div>
+    </div>
+  </md-input-container>
+  <md-button type="submit" class="md-primary">
+    Calculate
+  </md-button>
+  <md-card>
+    <md-card-title>
+      <md-card-title-text>
+        <span class="md-headline">Health</span>
+        <span class="md-subhead">Body mass category according your weight and
+          height</span>
+        <span class="md-headline"> Body Mass Category: </span>
+        <h3 class="md-display-2 md-accent">{{ category }}</h3>
+      </md-card-title-text>
+    </md-card-title>
+  </md-card>
+</form>

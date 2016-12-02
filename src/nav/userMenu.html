@@ -1,0 +1,23 @@
+<md-toolbar class="md-hue-2">
+  <div class="md-toolbar-tools">
+    <h2>
+      <span> Healthy Zone </span>
+    </h2>
+    <span flex></span>
+    <md-menu md-position-mode="target-right target">
+      <md-button aria-label="Account" ng-click="$mdOpenMenu($event)">
+        <md-icon> person </md-icon>
+      </md-button>
+      <md-menu-content width="4">
+        <md-menu-item>
+          <span> {{ currentUser.email }} </span>
+        </md-menu-item>
+        <md-menu-item>
+          <md-button ng-click="signOut()">
+            LogOut
+          </md-button>
+        </md-menu-item>
+      </md-menu-content>
+    </md-menu>
+  </div>
+</md-toolbar>
