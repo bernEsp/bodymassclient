@@ -13,7 +13,7 @@ bundle-min.js : bundle.js
 	--js bundle.js \
 	--js_output_file bundle-min.js \
 	--jscomp_off=misplacedTypeAnnotation \
-	--language_out=ES6
+	--language_out=ES5
 
 main.css : styles/sass/*.scss
 	node-sass \
@@ -39,7 +39,6 @@ build-dist-prod : bundle-min.js main.css
 	mkdir -p public/images
 	cp index.html public/index.html
 	cp bundle-min.js public/bundle.js
-	cp main.css dist/main.css
-	for f in images/*; do cp $$f public/$$f;  done
+	cp main.css public/main.css
 
 deploy-prod : clean build-dist-prod

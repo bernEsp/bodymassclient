@@ -39,7 +39,7 @@ angular.module(
   'ngInject';
 
   $authProvider.configure({
-    apiUrl: 'http://localhost:3000'
+    apiUrl: 'https://mybodymassindex.herokuapp.com'
   });
 
   $urlMatcherFactoryProvider.strictMode(false);

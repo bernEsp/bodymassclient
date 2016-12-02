@@ -1,0 +1,8 @@
+{
+  "name": "bodymassclient",
+  "description": "Body mass index client app.",
+  "repository": "https://github.com/bernardogalindo/bodymassclient.git",
+  "logo": "",
+  "keywords": ["angular", "REST", "API"],
+  "addons": []
+}
